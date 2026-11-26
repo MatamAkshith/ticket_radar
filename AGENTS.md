@@ -1,15 +1,22 @@
-
-# Foundation — AI Engineering System
+# Ticket Radar — Engineering Instructions
 
 ## 1. Purpose
 
-Foundation is a reusable AI Engineering Framework designed to help AI agents plan, develop, test, review and maintain software projects reliably.
+Ticket Radar is a movie ticket availability monitoring application designed to track booking releases, showtimes, screening formats and seat availability across supported ticket-booking platforms.
 
-It establishes consistent engineering standards, reusable skills, workflows, specialist agents and quality gates across different projects and technology stacks.
+The application initially targets:
+- Movie: Avengers: Doomsday
+- Location: Hyderabad, India
+- Platforms: BookMyShow and PVR / INOX
+- Notifications: Telegram
+
+The project uses the reusable Foundation AI Engineering Framework to plan, develop, test, review and maintain the application.
+
+All agents must treat Ticket Radar as the application being developed. Foundation is the engineering framework supporting its development, not the application itself.
 
 ## 2. Core Engineering Principles
 
-All agents working with Foundation must follow these principles:
+All agents must follow these principles:
 
 - Understand before implementing.
 - Inspect before modifying.
@@ -22,6 +29,8 @@ All agents working with Foundation must follow these principles:
 - Prioritize security and data integrity.
 - Document important decisions and changes.
 - Never claim something works without evidence.
+- Distinguish confirmed requirements from assumptions and proposals.
+- Never implement unverified platform capabilities as though they were guaranteed.
 
 ## 3. Engineering Workflow
 
@@ -96,6 +105,25 @@ Never assume that a project is empty or that a particular architecture exists wi
 - Review dependencies for security concerns.
 - Never weaken security controls merely to make functionality work.
 
+### Platform Monitoring Security
+
+Ticket Radar interacts with external movie ticket-booking platforms.
+
+All agents implementing platform integrations must:
+
+- Investigate permitted access methods before implementation.
+- Respect applicable platform terms and access restrictions.
+- Use reasonable monitoring intervals and request limits.
+- Avoid unnecessary or excessive requests.
+- Never bypass CAPTCHA, authentication or anti-bot protections.
+- Never attempt unauthorized access to private platform endpoints.
+- Handle unavailable sources and temporary failures gracefully.
+- Avoid collecting or storing unnecessary personal information.
+- Never assume that showtime, screening format or seat-level data is accessible until verified.
+- Document platform-specific limitations and risks.
+
+When a platform does not permit or technically support a required capability, report the limitation instead of attempting to circumvent it.
+
 ## 8. Database Standards
 
 - Understand the existing database schema before modifying it.
@@ -113,7 +141,7 @@ Never assume that a project is empty or that a particular architecture exists wi
 
 Follow the dedicated rules in:
 
-.agents/rules/06-git-documentation.md
+`.agents/rules/06-git-documentation.md`
 
 Important requirements:
 
@@ -128,9 +156,9 @@ Important requirements:
 
 ## 10. Persistent Project Context
 
-Every project using Foundation should maintain a central documentation file:
+Every development task must use:
 
-docs/Project_Notes.md
+`docs/Project_Notes.md`
 
 Before starting a development task:
 
@@ -210,3 +238,20 @@ A meaningful development task is complete only when:
 - The final report accurately describes the result.
 
 Code being written does not automatically mean a task is complete.
+
+## 15. Project-Specific Scope
+
+The initial scope of Ticket Radar is:
+
+- Booking release monitoring.
+- Showtime monitoring.
+- Screening format monitoring.
+- Seat availability monitoring, subject to platform feasibility.
+- Telegram notifications.
+- Web dashboard.
+
+Automated ticket purchasing and payment processing are outside the project's scope.
+
+The initial technology stack is documented in `docs/Project_Notes.md`. Proposed technologies must not be treated as finalized until architecture approval.
+
+When project requirements change, update Project_Notes.md and the relevant documentation before implementing the change.
