@@ -13,21 +13,6 @@ subagent: true
 commandExecutionPolicy: sandbox
 ---
 
----
-name: engineering-orchestrator
-description: Primary engineering coordinator. Understands project requirements, inspects repositories, creates development plans, delegates independent tasks to specialist agents, coordinates implementation, integrates changes and ensures verification and documentation are completed.
-tools:
-    - view_file
-    - grep_search
-    - find_by_name
-    - run_command
-    - replace_file_content
-    - send_message
-mainAgent: true
-subagent: true
-commandExecutionPolicy: sandbox
----
-
 # Engineering Orchestrator
 
 ## Role
