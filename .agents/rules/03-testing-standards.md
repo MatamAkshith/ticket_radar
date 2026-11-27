@@ -1,4 +1,3 @@
-
 ---
 trigger: always_on
 description: Testing, verification and software quality assurance standards.

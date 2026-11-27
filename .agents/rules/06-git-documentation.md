@@ -1,4 +1,3 @@
-
 ---
 trigger: always_on
 description: Automated local Git commits, version control safety and project documentation.

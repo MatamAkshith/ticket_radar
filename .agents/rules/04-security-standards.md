@@ -1,4 +1,3 @@
-
 ---
 trigger: always_on
 description: Security, privacy, access control and sensitive-data protection.

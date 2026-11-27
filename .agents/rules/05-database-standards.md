@@ -1,4 +1,3 @@
-
 ---
 trigger: always_on
 description: Database architecture, schema design, migrations and data integrity.

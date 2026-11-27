@@ -1,4 +1,3 @@
-
 ---
 trigger: always_on
 description: Software architecture, system design and modularity standards.
