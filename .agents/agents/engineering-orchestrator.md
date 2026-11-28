@@ -8,10 +8,12 @@ tools:
     - run_command
     - replace_file_content
     - send_message
+    - invoke_subagent
 mainAgent: true
 subagent: true
 commandExecutionPolicy: sandbox
 ---
+
 
 # Engineering Orchestrator
 
